@@ -74,7 +74,8 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>${maven.surefire.plugin.version}</version>
+					<version>3.0.0-M4</version>
+					<type>maven-plugin</type>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
