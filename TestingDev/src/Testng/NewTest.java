@@ -11,7 +11,7 @@ public class NewTest {
 	WebDriver driver;
 	@BeforeTest
 	  public void beforeTest() throws Exception {
-		  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		  //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 			driver=new ChromeDriver();
 			driver.get("http://172.16.8.93/");
 			driver.findElement(By.xpath("//a[@class='btn btn-link']")).click();
