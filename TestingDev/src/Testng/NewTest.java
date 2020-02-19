@@ -11,7 +11,7 @@ public class NewTest {
 	WebDriver driver;
 	@BeforeTest
 	  public void beforeTest() throws Exception {
-		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\vaibhavi.warke\\eclipse-workspace\\Angular-project-final\\TestingDev\\lib\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/Temp-build/TestingDev/lib/chromedriver.exe"");
 			driver=new ChromeDriver();
 			driver.get("http://172.16.8.93/");
 			driver.findElement(By.xpath("//a[@class='btn btn-link']")).click();
