@@ -7,11 +7,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 public class NewTest {
 	WebDriver driver;
 	@BeforeTest
 	  public void beforeTest() throws Exception {
 		  //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		    URL serverurl = new URL("http://172.16.8.93:4444/");
+            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+            driver = new RemoteWebDriver(serverurl,capabilities);
 			driver=new ChromeDriver();
 			driver.get("http://172.16.8.93/");
 			driver.findElement(By.xpath("//a[@class='btn btn-link']")).click();
